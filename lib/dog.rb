@@ -46,7 +46,7 @@ class Dog
   end
 
   def self.create(ATTRIBUTES)
-   dog = Dog.new(ATTRIBUTES)
+   dog = Dog.new(ATTRIBUTES[:id], ATTRIBUTES[:name], ATTRIBUTES[:breed])
    dog.save
    dog
  end
