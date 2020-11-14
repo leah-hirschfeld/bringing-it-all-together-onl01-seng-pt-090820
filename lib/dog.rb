@@ -1,5 +1,9 @@
 class Dog
-
+  ATTRIBUTES = {
+    :id => "INTEGER PRIMARY KEY",
+    :name => "TEXT",
+    :breed => "TEXT"
+  }
   attr_accessor :id, :name, :breed
 
   def initialize(id: nil, name:, breed:)
