@@ -46,7 +46,7 @@ class Dog
    dog
  end
 
- def self.new_from_db(row)
+ def self.new_from_db(name:, breed:)
    new_dog = self.new  # self.new is the same as running Song.new
    new_dog.id = row[0]
    new_dog.name =  row[1]
