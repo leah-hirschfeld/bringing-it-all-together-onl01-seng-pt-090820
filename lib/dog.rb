@@ -56,6 +56,20 @@ class Dog
     Dog.new(result[0], result[1], result[2])
   end
 
+  ef self.find_by_name(name)
+   sql = <<-SQL
+     SELECT *
+     FROM songs
+     WHERE name = ?
+     LIMIT 1
+   SQL
+
+   DB[:conn].execute(sql, name).map do |row|
+     self.new_from_db(row)
+   end.first #first gives us the first element of the returned array
+ end
+
+
   def self.find_or_create_by(name:, breed:)
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
     if !dog.empty?
