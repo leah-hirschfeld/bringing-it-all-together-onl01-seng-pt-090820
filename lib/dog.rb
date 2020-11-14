@@ -4,7 +4,7 @@ class Dog
     :name => "TEXT",
     :breed => "TEXT"
   }
-  
+
   attr_accessor :id, :name, :breed
 
   def initialize(id: nil, name:, breed:)
@@ -45,7 +45,7 @@ class Dog
     self
   end
 
-  def self.create(id:, name:, breed:)
+  def self.create(ATTRIBUTES)
    dog = Dog.new(id, name, breed)
    dog.save
    dog
