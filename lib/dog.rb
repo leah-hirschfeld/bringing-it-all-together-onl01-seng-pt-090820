@@ -66,7 +66,7 @@ class Dog
 
    DB[:conn].execute(sql, name).map do |row|
      self.new_from_db(row)
-   end.first #first gives us the first element of the returned array
+   end.first
  end
 
 
