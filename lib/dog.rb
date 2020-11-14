@@ -47,11 +47,11 @@ class Dog
  end
 
  def self.new_from_db(attributes)
-   new_dog = self.new  # self.new is the same as running Song.new
+   new_dog = self.new
    new_dog.id = attributes[0]
    new_dog.name = attributes[1]
    new_dog.breed = attributes[2]
-   new_dog  # return the newly created instance
+   new_dog
  end
 
  def self.find_by_id(name:, breed:)
