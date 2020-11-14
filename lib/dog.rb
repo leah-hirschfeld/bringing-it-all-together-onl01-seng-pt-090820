@@ -47,11 +47,7 @@ class Dog
  end
 
  def self.new_from_db(attributes)
-   new_dog = self.new
-   new_dog.id = attributes[0]
-   new_dog.name = attributes[1]
-   new_dog.breed = attributes[2]
-   new_dog
+   self.new(row[0], row[1], row[2])
  end
 
  def self.find_by_id(name:, breed:)
