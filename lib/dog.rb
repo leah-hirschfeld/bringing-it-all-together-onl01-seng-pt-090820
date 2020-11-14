@@ -4,6 +4,7 @@ class Dog
     :name => "TEXT",
     :breed => "TEXT"
   }
+  
   attr_accessor :id, :name, :breed
 
   def initialize(id: nil, name:, breed:)
