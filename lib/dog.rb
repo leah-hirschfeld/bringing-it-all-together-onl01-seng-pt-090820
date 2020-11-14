@@ -48,8 +48,8 @@ class Dog
  end
 
  def self.new_from_db(row)
-   self.new(row[0], row[1], row[2])
    binding.pry
+   self.new(row[0], row[1], row[2])
  end
 
  def self.find_by_id(name:, breed:)
