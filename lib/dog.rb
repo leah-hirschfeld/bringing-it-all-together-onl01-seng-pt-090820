@@ -1,9 +1,4 @@
 class Dog
-  ATTRIBUTES = {
-    :id => "INTEGER PRIMARY KEY",
-    :name => "TEXT",
-    :breed => "TEXT"
-  }
 
   attr_accessor :name, :breed
 
